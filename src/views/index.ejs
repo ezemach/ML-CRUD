@@ -21,6 +21,7 @@
 			<% productsVisited.forEach(product => { %>
 			<%- include('./partials/cardProduct',{product}) %>
 			<% }) %>
+			
 		</div>
 	</div>
 	<!-- /ultima visita -->
@@ -33,9 +34,10 @@
 			</div>
 			<!-- Show the "in-sale" products, aca optamos por filtrar en este mismo lugar y nos devuelve un array que luego le aplicamos un forEach-->
 				
-			<% products.filter(product => product.category === "in-sale").forEach(product => { %>
+			<% productsInSale.forEach(product => { %>
 				<%- include('./partials/cardProduct',{product}) %>
-			<% }) %>
+				<% }) %>
+				
 			
 		</div>
 	</div>
